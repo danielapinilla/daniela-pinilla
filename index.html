@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio Daniela Pinilla</title>
+<meta name="description" content="Daniela Pinilla Cabrera — Analista de Datos Jr. en busca de práctica. Power BI, SQL, Python, Google Apps Script.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fb;--card:#fff;--text:#0f172a;--muted:#55607a;--line:#e3e7ef;--accent:#2b44d6;--accent-soft:#eaedfc;--chip:#f1f3f8}
+:root[data-theme="dark"]{--bg:#0d1117;--card:#151b24;--text:#e8ecf3;--muted:#9aa5b8;--line:#253041;--accent:#7b8cff;--accent-soft:#1d2440;--chip:#1b2230}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1117;--card:#151b24;--text:#e8ecf3;--muted:#9aa5b8;--line:#253041;--accent:#7b8cff;--accent-soft:#1d2440;--chip:#1b2230}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-weight:800;text-decoration:none;color:var(--text);white-space:nowrap}
+nav{display:flex;gap:4px;align-items:center;overflow-x:auto}
+nav a{font-size:14px;text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:8px;white-space:nowrap}
+nav a:hover{background:var(--accent-soft);color:var(--accent)}
+#theme{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(40px,8vw,72px);line-height:1.05;margin:14px 0 20px;letter-spacing:-.03em}
+h2{font-size:clamp(26px,4vw,34px);margin:10px 0 24px;letter-spacing:-.02em}
+h3{margin:0 0 6px;font-size:20px}
+.lead{font-size:18px;color:var(--muted);max-width:680px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{display:block;font-size:32px;color:var(--accent);line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{font:13px "JetBrains Mono",monospace;background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:8px;cursor:pointer;color:var(--text)}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:opacity .2s}
+.card.dim{opacity:.3}
+.card .tag{font:12px "JetBrains Mono",monospace;color:var(--muted)}
+.card p{margin:0;color:var(--muted)}
+.card .tools{display:flex;flex-wrap:wrap;gap:6px}
+.card .tools span{font:12px "JetBrains Mono",monospace;background:var(--chip);padding:3px 8px;border-radius:6px}
+.card .more{margin-top:auto;font-weight:600;text-decoration:none}
+.feature{grid-column:1/-1;border-color:var(--accent);background:linear-gradient(135deg,var(--accent-soft),var(--card) 60%)}
+.timeline{display:grid;gap:14px}
+.item{display:grid;grid-template-columns:140px 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.item .when{font:13px "JetBrains Mono",monospace;color:var(--muted)}
+.item p{margin:4px 0 0;color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.contact a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-decoration:none;color:var(--text)}
+.contact a small{display:block;color:var(--muted);font-size:13px}
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.dash figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.dash img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:top;cursor:zoom-in;border-bottom:1px solid var(--line)}
+.dash figcaption{padding:14px 16px;font-size:14px;color:var(--muted)}
+.dash figcaption b{display:block;color:var(--text);font-size:16px;margin-bottom:4px}
+#zoom{border:0;padding:0;background:none;max-width:95vw}
+#zoom::backdrop{background:rgba(0,0,0,.8)}
+#zoom img{max-width:95vw;max-height:90vh;display:block;border-radius:8px}
+footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.item{grid-template-columns:1fr;gap:4px}nav a.hide-sm{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#inicio">Daniela Pinilla</a>
+  <nav>
+    <a href="#sobre-mi" class="hide-sm">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#dashboards">Power BI</a>
+    <a href="#formacion" class="hide-sm">Formación</a>
+    <a href="#contacto">Contacto</a>
+    <button id="theme" aria-label="Cambiar tema">◐</button>
+  </nav>
+</div></header>
+
+<main>
+<section id="inicio"><div class="wrap">
+  <div class="eyebrow">Analista de datos Jr. · Santiago, Chile · Buscando práctica</div>
+  <h1>Daniela Pinilla Cabrera</h1>
+  <p class="lead">Analista de datos formada en Fundación Soy Más. Antes de trabajar con datos pasé más de 10 años en atención al cliente, eventos y control de stock, así que entiendo lo que una operación necesita medir. Hoy convierto esa experiencia en dashboards de Power BI, automatizaciones con Google Apps Script y apps web con Python y SQL.</p>
+  <div class="btns">
+    <a class="btn primary" href="#proyectos">Ver proyectos →</a>
+    <a class="btn ghost" href="#contacto">Conversemos</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>3</b><span>apps publicadas en línea</span></div>
+    <div class="stat"><b>8</b><span>dashboards en Power BI</span></div>
+    <div class="stat"><b>10+</b><span>años en operaciones y atención</span></div>
+    <div class="stat"><b>9</b><span>herramientas que uso</span></div>
+  </div>
+  <p class="eyebrow" style="margin-top:36px">Toca una herramienta para ver dónde la uso</p>
+  <div class="chips" id="chips"></div>
+</div></section>
+
+<section id="proyectos"><div class="wrap">
+  <div class="eyebrow">Proyectos</div>
+  <h2>Lo que he construido</h2>
+  <div class="grid">
+    <article class="card feature" data-tools="Python,SQL,Google Sheets,IA">
+      <div class="tag">Proyecto principal · en línea · 2026</div>
+      <h3>SmartLogi — Gestión de flotas</h3>
+      <p>App web interna para una flota de camiones: registra cuánto se gasta en combustible y mantenimiento por vehículo, automatiza el flujo logístico y muestra indicadores de desempeño para decidir dónde se va el dinero.</p>
+      <div class="tools"><span>Python</span><span>SQL</span><span>Google Sheets</span><span>VS Code</span><span>Claude (IA)</span><span>Vercel</span></div>
+      <a class="more" href="https://smartlogic.vercel.app/login" target="_blank" rel="noopener">Ver demo ↗</a>
+    </article>
+    <article class="card" data-tools="Apps Script,Google Sheets">
+      <div class="tag">Rubro belleza · 2026</div>
+      <h3>App de agendamiento</h3>
+      <p>App web para reservar horas en 6 pasos, con correo de confirmación automático a la clienta y registro ordenado en una base de datos.</p>
+      <div class="tools"><span>Apps Script</span><span>Google Sheets</span></div>
+      <a class="more" href="https://script.google.com/macros/s/AKfycbylxZv7Em8ATTkAyPxTkAwGYRVPruLV_l5Y3vuw0apYKogEiqdsj586KMsbrbYfLuI5/exec" target="_blank" rel="noopener">Ver app ↗</a>
+    </article>
+    <article class="card" data-tools="Apps Script,Google Sheets">
+      <div class="tag">Rubro belleza · 2026</div>
+      <h3>CRM de clientas</h3>
+      <p>Panel para gestionar clientas, detectar a quienes no vuelven y enviarles saludos y recordatorios por WhatsApp para mejorar la retención.</p>
+      <div class="tools"><span>Apps Script</span><span>Google Sheets</span><span>WhatsApp</span></div>
+      <a class="more" href="https://script.google.com/macros/s/AKfycbzbK71nNwokfn4Lag0GphEcCCFRas3CK9VZ_9ZvEUcVeQqP42WJQKFnV1YzEiYluMxJkA/exec" target="_blank" rel="noopener">Ver app ↗</a>
+    </article>
+    <article class="card" data-tools="Power BI,Excel">
+      <div class="tag">Business Intelligence · 2026</div>
+      <h3>8 dashboards en Power BI</h3>
+      <p>Informes de ventas, nómina, compras públicas, SII, becas, subsidios y encuestas, con KPIs, filtros y medidas DAX.</p>
+      <div class="tools"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
+      <a class="more" href="#dashboards">Ver dashboards ↓</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="dashboards"><div class="wrap">
+  <div class="eyebrow">Power BI</div>
+  <h2>Dashboards</h2>
+  <p class="lead" style="margin-bottom:24px">Informes hechos durante el Programa de Análisis de Datos de Fundación Soy Más. Haz clic en una imagen para verla en grande.</p>
+  <div class="dash">
+    <figure><img src="img/consolidado-ventas.jpg" alt="Consolidado general de ventas" loading="lazy"><figcaption><b>Consolidado general de ventas</b>Ventas por $428 mill. con un margen del 42,74 %, desglosadas por sucursal, categoría y mes. Las categorías que más venden son Terminaciones y Electricidad.</figcaption></figure>
+    <figure><img src="img/ventas-categorias.jpg" alt="Resumen de ventas y categorías" loading="lazy"><figcaption><b>Ventas y categorías</b>Top 5 vendedores, ventas por categoría y evolución mensual de ventas contra margen, con filtros de región, categoría y mes.</figcaption></figure>
+    <figure><img src="img/nomina-dotacion.jpg" alt="Panorama de nómina y dotación" loading="lazy"><figcaption><b>Nómina y dotación</b>Costo empresa, ausentismo, horas extras y tipo de contrato de 312 colaboradores, por departamento y sucursal.</figcaption></figure>
+    <figure><img src="img/sii-portada.jpg" alt="Informe ejecutivo SII" loading="lazy"><figcaption><b>Empresas e indicadores SII</b>Informe de 5 páginas con navegación por botones y una página de auditoría de medidas DAX. Usa datos oficiales del SII sobre tramos de venta y masa laboral.</figcaption></figure>
+    <figure><img src="img/sii-causa-raiz.jpg" alt="Análisis de causa raíz SII" loading="lazy"><figcaption><b>SII: causa raíz y nichos</b>Compara trabajadores contratados con honorarios por tramo de empresa (2005–2024) y evalúa los nichos según su competencia y facturación.</figcaption></figure>
+    <figure><img src="img/ordenes-compra.jpg" alt="Órdenes de compra por proveedor" loading="lazy"><figcaption><b>Órdenes de compra</b>296 órdenes de compra por $17.894 mill.: concentración de proveedores y relación entre cantidad de órdenes y monto transado.</figcaption></figure>
+    <figure><img src="img/permisos-circulacion.jpg" alt="Permisos de circulación" loading="lazy"><figcaption><b>Ingresos municipales por vehículos</b>Monto total a pagar por marca, año de fabricación y tipo de vehículo.</figcaption></figure>
+    <figure><img src="img/becas-mineduc.jpg" alt="Sistema de becas" loading="lazy"><figcaption><b>Becas y gratuidad</b>Estado de las postulaciones, becas más pedidas, cobertura por quintil y distribución por región, institución y género.</figcaption></figure>
+    <figure><img src="img/subsidios-minvu.jpg" alt="Subsidios habitacionales" loading="lazy"><figcaption><b>Subsidios habitacionales</b>Monitoreo del presupuesto en UF: el programa DS49 concentra el 65 % del gasto. Incluye el costo promedio por beneficiario y el crecimiento anual.</figcaption></figure>  </div>
+</div></section>
+<dialog id="zoom"><img alt=""></dialog>
+
+<section id="sobre-mi"><div class="wrap">
+  <div class="eyebrow">Sobre mí</div>
+  <h2>De la operación a los datos</h2>
+  <div class="timeline">
+    <div class="item"><div class="when">2015 – 2026</div><div><h3>Servicios operativos y atención al cliente</h3><p>Club Manquehue, Hotel Time, Hotel Manquehue, Doggis. Atención al público, chequeo de stock y control de inventario, y liderazgo ocasional de equipos pequeños en eventos.</p></div></div>
+    <div class="item"><div class="when">2018</div><div><h3>Ejecutiva online — ventas telecomunicaciones</h3><p>Asesoría comercial para Claro, Movistar, VTR, WOM y DirecTV, con captura estructurada de datos de clientes.</p></div></div>
+  </div>
+</div></section>
+
+<section id="formacion"><div class="wrap">
+  <div class="eyebrow">Formación</div>
+  <h2>Educación y certificaciones</h2>
+  <div class="timeline">
+    <div class="item"><div class="when">2025 – 2026</div><div><h3>Programa de Análisis de Datos — Fundación Soy Más</h3><p>Excel avanzado, Power BI, SQL, Python, Data Studio, Google Apps Script e IA aplicada.</p></div></div>
+    <div class="item"><div class="when">Sep – Oct 2026</div><div><h3>Daxus LATAM — 3 certificados</h3><p>Python en la práctica · Inteligencia Artificial en la práctica · Agentes de IA en la práctica.</p></div></div>
+    <div class="item"><div class="when">2014</div><div><h3>Técnico en Contabilidad — Colegio Técnico Profesional Aprender</h3><p>Gestión administrativa y financiera, conciliaciones bancarias y registros contables.</p></div></div>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap">
+  <div class="eyebrow">Contacto</div>
+  <h2>Busco mi práctica profesional</h2>
+  <p class="lead" style="margin-bottom:24px">Si tu equipo necesita ordenar datos, armar reportes o automatizar tareas repetitivas, conversemos.</p>
+  <div class="contact">
+    <a href="mailto:dpinillacabrera@gmail.com"><small>Correo</small>dpinillacabrera@gmail.com</a>
+    <a href="https://linkedin.com/in/daniela-pinilla-8a9487173" target="_blank" rel="noopener"><small>LinkedIn</small>Daniela Pinilla ↗</a>
+    <a href="https://wa.me/56966949275" target="_blank" rel="noopener"><small>WhatsApp</small>+56 9 6694 9275</a>
+  </div>
+</div></section>
+</main>
+<footer>© 2026 Daniela Pinilla Cabrera</footer>
+
+<script>
+const tools=["Power BI","Excel","SQL","Python","Apps Script","Google Sheets","IA"];
+const box=document.getElementById('chips'),cards=[...document.querySelectorAll('.card[data-tools]')];
+let active=null;
+tools.forEach(t=>{const b=document.createElement('button');b.className='chip';b.textContent=t;b.onclick=()=>{
+  active=active===t?null:t;
+  box.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.textContent===active));
+  cards.forEach(c=>c.classList.toggle('dim',!!active&&!c.dataset.tools.split(',').includes(active)));
+  if(active)document.getElementById('proyectos').scrollIntoView();
+};box.appendChild(b)});
+const zoom=document.getElementById('zoom');
+document.querySelectorAll('.dash img').forEach(i=>i.onclick=()=>{zoom.querySelector('img').src=i.src;zoom.showModal()});
+zoom.onclick=()=>zoom.close();
+const root=document.documentElement;
+try{const s=localStorage.getItem('theme');if(s)root.dataset.theme=s}catch(e){}
+document.getElementById('theme').onclick=()=>{
+  const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+};
+</script>
+</body>
+</html>
