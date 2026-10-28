@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portafolio Daniela Pinilla</title>
-<meta name="description" content="Daniela Pinilla Cabrera — Analista de Datos Jr. en busca de práctica. Power BI, SQL, Python, Google Apps Script.">
+<meta name="description" content="Daniela Pinilla Cabrera — Analista de Datos. Power BI, SQL, Python, Google Apps Script.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fbf7f4;--card:#fff;--text:#2a1f2d;--muted:#6e5f6f;--line:#ecdfe3;--accent:#9b2f6b;--accent-soft:#f8e6ef;--chip:#f6eef1}
@@ -97,7 +97,8 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
     
     <a href="#proyectos">Proyectos</a>
     <a href="#dashboards">Power BI</a>
-    <a href="#sobre-mi" class="hide-sm">Trayectoria</a>
+    <a href="#python-sql">Python/SQL</a>
+    <a href="#sobre-mi">Sobre mí</a>
     <a href="#contacto">Contacto</a>
     <button id="theme" aria-label="Cambiar tema">◐</button>
   </nav>
@@ -105,16 +106,16 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 
 <main>
 <section id="inicio"><div class="wrap">
-  <div class="eyebrow">Analista de datos Jr. · Santiago, Chile · Buscando práctica</div>
+  <div class="eyebrow">Analista de datos · Santiago, Chile</div>
   <h1>Daniela Pinilla Cabrera</h1>
-  <p class="lead">Analista de datos formada en Fundación Soy Más. Antes de trabajar con datos pasé más de 10 años en atención al cliente, eventos y control de stock, así que entiendo lo que una operación necesita medir. Hoy convierto esa experiencia en dashboards de Power BI, automatizaciones con Google Apps Script y apps web con Python y SQL.</p>
+  <p class="lead">Técnico en Contabilidad y analista de datos formada en Fundación Soy Más. Antes de trabajar con datos pasé más de 10 años en atención al cliente, eventos y control de stock, así que entiendo lo que una operación necesita medir. Hoy convierto esa experiencia en dashboards de Power BI, automatizaciones con Google Apps Script y apps web con Python y SQL.</p>
   <div class="btns">
     <a class="btn primary" href="#proyectos">Ver proyectos →</a>
     <a class="btn ghost" href="#contacto">Conversemos</a>
   </div>
   <div class="stats">
     <div class="stat"><b>3</b><span>apps publicadas en línea</span></div>
-    <div class="stat"><b>8</b><span>dashboards en Power BI</span></div>
+    <div class="stat"><b>9</b><span>dashboards en Power BI</span></div>
     <div class="stat"><b>10+</b><span>años en operaciones y atención</span></div>
     <div class="stat"><b>9</b><span>herramientas que uso</span></div>
   </div>
@@ -149,7 +150,7 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
     </article>
     <article class="card" data-tools="Power BI,Excel">
       <div class="tag">Business Intelligence · 2026</div>
-      <h3>8 dashboards en Power BI</h3>
+      <h3>9 dashboards en Power BI</h3>
       <p>Informes de ventas, nómina, compras públicas, SII, becas, subsidios y encuestas, con KPIs, filtros y medidas DAX.</p>
       <div class="tools"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
       <a class="more" href="#dashboards">Ver dashboards ↓</a>
@@ -174,14 +175,64 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 </div></section>
 <dialog id="zoom"><img alt=""></dialog>
 
+<section id="python-sql"><div class="wrap">
+  <div class="eyebrow">Python · SQL</div>
+  <h2>Proyectos de Python y SQL</h2>
+  <div class="grid" id="py-grid">
+    <article class="card feature" data-tools="Python">
+      <div class="tag">Python · Visualización</div>
+      <h3>Gráficos para logística y presupuesto</h3>
+      <p>Programas que piden datos al usuario y los grafican con Matplotlib: distribución del presupuesto familiar (barras y torta), relación entre antigüedad del stock y costo de almacenamiento (dispersión), entregas diarias de una flota (línea) y gasto acumulado en compras (área con NumPy).</p>
+      <div class="tools"><span>Python</span><span>Matplotlib</span><span>NumPy</span></div>
+      <a class="more" href="https://colab.research.google.com/drive/165JvHkB1p50ypiGi7StqCGVOYBLLaKrk" target="_blank" rel="noopener">Ver notebook en Colab ↗</a>
+    </article>
+    <article class="card" data-tools="SQL">
+      <div class="tag">SQL · Calidad de datos</div>
+      <h3>Cruce de alumnas y cursos con JOINs</h3>
+      <p>Base de datos con dos tablas relacionadas. Uso INNER, LEFT y RIGHT JOIN, filtros y ordenamiento para cruzar la información y encontrar inconsistencias: alumnas sin curso inscrito y cursos asignados a una alumna que no existe.</p>
+      <div class="tools"><span>SQL</span><span>JOIN</span><span>WHERE / IS NULL</span><span>ORDER BY</span></div>
+      <a class="more" href="https://www.db-fiddle.com/f/3qnyr526Umnszix5TNDGBT/0" target="_blank" rel="noopener">Ver consultas en DB Fiddle ↗</a>
+    </article>
+    <article class="card" data-tools="Python">
+      <div class="tag">Python · Ventas</div>
+      <h3>Reporte de ventas semanales</h3>
+      <p>Calcula el total acumulado de ventas de una tienda durante 6 días y muestra su evolución en un gráfico. Incluye conversión de tipos de datos y captura de información con input().</p>
+      <div class="tools"><span>Python</span><span>Matplotlib</span></div>
+      <a class="more" href="https://colab.research.google.com/drive/1HmzajPRznD577ZXyX4YdeQwVB4NlNIjg" target="_blank" rel="noopener">Ver notebook en Colab ↗</a>
+    </article>
+    <article class="card" data-tools="Python">
+      <div class="tag">Python · Inventario</div>
+      <h3>Funciones y clase Producto</h3>
+      <p>Una clase Producto que controla el stock al vender, funciones reutilizables y cálculos de negocio: cobro de un taller por sesiones, conversor de minutos a horas y reparto equitativo con división entera y módulo.</p>
+      <div class="tools"><span>Python</span><span>POO</span><span>Funciones</span></div>
+      <a class="more" href="https://colab.research.google.com/drive/1nL-ijI3LnGO4aBR1Ui0P2P5jbgh0geqH" target="_blank" rel="noopener">Ver notebook en Colab ↗</a>
+    </article>
+    <article class="card" data-tools="Python">
+      <div class="tag">Python · Reglas de negocio</div>
+      <h3>Alertas de stock y metas de venta</h3>
+      <p>Condicionales y f-strings para avisar cuando quedan pocas unidades en bodega, evaluar si se cumplió la meta de ventas y cuánto faltó, y aplicar descuentos según la edad del cliente.</p>
+      <div class="tools"><span>Python</span><span>if / elif / else</span><span>f-strings</span></div>
+      <a class="more" href="https://colab.research.google.com/drive/1xoJDANuJ5YhzTAIc6LOVmSfvkA4MyLFp" target="_blank" rel="noopener">Ver notebook en Colab ↗</a>
+    </article>
+    <article class="card" data-tools="Python">
+      <div class="tag">Python · Lógica</div>
+      <h3>Estructuras de decisión</h3>
+      <p>Ejercicios de lógica condicional: validación de edad, control de temperatura, clasificación de notas y de números con if, elif y else.</p>
+      <div class="tools"><span>Python</span><span>Condicionales</span></div>
+      <a class="more" href="https://colab.research.google.com/drive/1ucIRa2j1fg4-O0N3E6_nw87i1JW1Qzol" target="_blank" rel="noopener">Ver notebook en Colab ↗</a>
+    </article>
+  </div>
+</div></section>
+
 <section id="sobre-mi"><div class="wrap">
-  <div class="eyebrow">Trayectoria</div>
+  <div class="eyebrow">Sobre mí</div>
   <h2>De la operación a los datos</h2>
+  <p class="lead" style="margin-bottom:40px">Soy Técnico en Contabilidad y analista de datos. Trabajé más de 10 años en atención al cliente, eventos y control de stock, donde aprendí a ordenar información y a entender qué necesita medir un negocio. En Fundación Soy Más me formé en Excel avanzado, Power BI, SQL, Python y Google Apps Script, y hoy uso esas herramientas para crear dashboards, automatizar tareas y construir aplicaciones web.</p>
   <div class="two">
     <div>
       <h3 class="col-title">Experiencia</h3>
       <ol class="xp">
-        <li class="open"><button><span class="when">2025–2026</span><span><b>Analista de Datos Jr. (en formación)</b><small>Fundación Soy Más</small></span></button>
+        <li class="open"><button><span class="when">2025–2026</span><span><b>Analista de Datos (en formación)</b><small>Fundación Soy Más</small></span></button>
           <ul><li>Dashboards e informes interactivos en Power BI para ventas, nómina, compras y datos públicos.</li><li>Limpieza y preparación de datos en Excel y SQL; automatizaciones con Google Apps Script y Python.</li></ul></li>
         <li><button><span class="when">2015–2026</span><span><b>Servicios operativos y atención al cliente</b><small>Club Manquehue, Hotel Time, Hotel Manquehue</small></span></button>
           <ul><li>Atención al público y resolución de consultas.</li><li>Chequeo de stock, control de inventario y apoyo en reposición.</li><li>Liderazgo ocasional de equipos pequeños en eventos.</li></ul></li>
@@ -213,7 +264,7 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 
 <section id="contacto"><div class="wrap">
   <div class="eyebrow">Contacto</div>
-  <h2>Busco mi práctica profesional</h2>
+  <h2>Conversemos</h2>
   <p class="lead" style="margin-bottom:24px">Si tu equipo necesita ordenar datos, armar reportes o automatizar tareas repetitivas, conversemos.</p>
   <div class="contact">
     <a href="mailto:dpinillacabrera@gmail.com"><small>Correo</small>dpinillacabrera@gmail.com</a>
