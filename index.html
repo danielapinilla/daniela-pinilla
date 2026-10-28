@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portafolio Daniela Pinilla</title>
 <meta name="description" content="Daniela Pinilla Cabrera — Analista de Datos Jr. en busca de práctica. Power BI, SQL, Python, Google Apps Script.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f8fb;--card:#fff;--text:#0f172a;--muted:#55607a;--line:#e3e7ef;--accent:#2b44d6;--accent-soft:#eaedfc;--chip:#f1f3f8}
-:root[data-theme="dark"]{--bg:#0d1117;--card:#151b24;--text:#e8ecf3;--muted:#9aa5b8;--line:#253041;--accent:#7b8cff;--accent-soft:#1d2440;--chip:#1b2230}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1117;--card:#151b24;--text:#e8ecf3;--muted:#9aa5b8;--line:#253041;--accent:#7b8cff;--accent-soft:#1d2440;--chip:#1b2230}}
+:root{--bg:#fbf7f4;--card:#fff;--text:#2a1f2d;--muted:#6e5f6f;--line:#ecdfe3;--accent:#9b2f6b;--accent-soft:#f8e6ef;--chip:#f6eef1}
+:root[data-theme="dark"]{--bg:#1a1419;--card:#241b22;--text:#f3e9ee;--muted:#b9a5b1;--line:#3a2c36;--accent:#f08bbf;--accent-soft:#3a2131;--chip:#2e222b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1419;--card:#241b22;--text:#f3e9ee;--muted:#b9a5b1;--line:#3a2c36;--accent:#f08bbf;--accent-soft:#3a2131;--chip:#2e222b}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "DM Sans",system-ui,sans-serif}
 a{color:var(--accent)}
 .wrap{max-width:960px;margin:0 auto;padding:0 16px}
 header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -22,22 +22,25 @@ nav{display:flex;gap:4px;align-items:center;overflow-x:auto}
 nav a{font-size:14px;text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:8px;white-space:nowrap}
 nav a:hover{background:var(--accent-soft);color:var(--accent)}
 #theme{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
-section{padding:64px 0;border-bottom:1px solid var(--line)}
+section{padding:72px 0}
+section:nth-of-type(even){background:var(--chip)}
+#inicio{background:radial-gradient(circle at 85% 20%,var(--accent-soft),transparent 45%)}
 .eyebrow{font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-h1{font-size:clamp(40px,8vw,72px);line-height:1.05;margin:14px 0 20px;letter-spacing:-.03em}
+h1,h2,.brand{font-family:Fraunces,Georgia,serif}
+h1{font-size:clamp(40px,8vw,72px);line-height:1.05;margin:14px 0 20px;letter-spacing:-.02em;color:var(--accent)}
 h2{font-size:clamp(26px,4vw,34px);margin:10px 0 24px;letter-spacing:-.02em}
 h3{margin:0 0 6px;font-size:20px}
 .lead{font-size:18px;color:var(--muted);max-width:680px}
 .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent)}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent)}
 .btn.primary{background:var(--accent);color:#fff}
 .btn.ghost{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:16px;padding:16px}
 .stat b{display:block;font-size:32px;color:var(--accent);line-height:1.1}
 .stat span{font-size:14px;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.chip{font:13px "JetBrains Mono",monospace;background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:8px;cursor:pointer;color:var(--text)}
+.chip{font:13px "JetBrains Mono",monospace;background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;cursor:pointer;color:var(--text)}
 .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:opacity .2s}
@@ -63,6 +66,26 @@ h3{margin:0 0 6px;font-size:20px}
 #zoom{border:0;padding:0;background:none;max-width:95vw}
 #zoom::backdrop{background:rgba(0,0,0,.8)}
 #zoom img{max-width:95vw;max-height:90vh;display:block;border-radius:8px}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:48px}
+.col-title{font-size:22px;margin:0 0 18px}
+.xp{list-style:none;margin:0;padding:0;position:relative}
+.xp::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.xp>li{position:relative;padding:0 0 18px 34px}
+.xp>li::before{content:"";position:absolute;left:1px;top:6px;width:12px;height:12px;border:2px solid var(--muted);border-radius:50%;background:var(--bg)}
+.xp>li.open::before{background:var(--accent);border-color:var(--accent)}
+.xp button{all:unset;cursor:pointer;display:grid;grid-template-columns:96px 1fr;gap:12px;width:100%}
+.xp .when{font:13px "JetBrains Mono",monospace;color:var(--muted);padding-top:3px}
+.xp b{display:block;font-size:17px}
+.xp small{color:var(--muted)}
+.xp ul{display:none;margin:10px 0 0 108px;padding-left:18px;color:var(--muted);font-size:15px}
+.xp li.open ul{display:block}
+.hint{font-size:13px;color:var(--muted);margin:0}
+.edu>div{border-left:2px solid var(--line);padding:2px 0 2px 16px;margin-bottom:16px}
+.edu b{display:block;font-size:17px}
+.edu small{color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-size:14px}
+@media (max-width:760px){.two{grid-template-columns:1fr}.xp ul{margin-left:0}.xp button{grid-template-columns:1fr;gap:0}}
 footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.item{grid-template-columns:1fr;gap:4px}nav a.hide-sm{display:none}}
 </style>
@@ -71,10 +94,10 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 <header><div class="wrap">
   <a class="brand" href="#inicio">Daniela Pinilla</a>
   <nav>
-    <a href="#sobre-mi" class="hide-sm">Sobre mí</a>
+    
     <a href="#proyectos">Proyectos</a>
     <a href="#dashboards">Power BI</a>
-    <a href="#formacion" class="hide-sm">Formación</a>
+    <a href="#sobre-mi" class="hide-sm">Trayectoria</a>
     <a href="#contacto">Contacto</a>
     <button id="theme" aria-label="Cambiar tema">◐</button>
   </nav>
@@ -152,21 +175,39 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
 <dialog id="zoom"><img alt=""></dialog>
 
 <section id="sobre-mi"><div class="wrap">
-  <div class="eyebrow">Sobre mí</div>
+  <div class="eyebrow">Trayectoria</div>
   <h2>De la operación a los datos</h2>
-  <div class="timeline">
-    <div class="item"><div class="when">2015 – 2026</div><div><h3>Servicios operativos y atención al cliente</h3><p>Club Manquehue, Hotel Time, Hotel Manquehue, Doggis. Atención al público, chequeo de stock y control de inventario, y liderazgo ocasional de equipos pequeños en eventos.</p></div></div>
-    <div class="item"><div class="when">2018</div><div><h3>Ejecutiva online — ventas telecomunicaciones</h3><p>Asesoría comercial para Claro, Movistar, VTR, WOM y DirecTV, con captura estructurada de datos de clientes.</p></div></div>
-  </div>
-</div></section>
-
-<section id="formacion"><div class="wrap">
-  <div class="eyebrow">Formación</div>
-  <h2>Educación y certificaciones</h2>
-  <div class="timeline">
-    <div class="item"><div class="when">2025 – 2026</div><div><h3>Programa de Análisis de Datos — Fundación Soy Más</h3><p>Excel avanzado, Power BI, SQL, Python, Data Studio, Google Apps Script e IA aplicada.</p></div></div>
-    <div class="item"><div class="when">Sep – Oct 2026</div><div><h3>Daxus LATAM — 3 certificados</h3><p>Python en la práctica · Inteligencia Artificial en la práctica · Agentes de IA en la práctica.</p></div></div>
-    <div class="item"><div class="when">2014</div><div><h3>Técnico en Contabilidad — Colegio Técnico Profesional Aprender</h3><p>Gestión administrativa y financiera, conciliaciones bancarias y registros contables.</p></div></div>
+  <div class="two">
+    <div>
+      <h3 class="col-title">Experiencia</h3>
+      <ol class="xp">
+        <li class="open"><button><span class="when">2025–2026</span><span><b>Analista de Datos Jr. (en formación)</b><small>Fundación Soy Más</small></span></button>
+          <ul><li>Dashboards e informes interactivos en Power BI para ventas, nómina, compras y datos públicos.</li><li>Limpieza y preparación de datos en Excel y SQL; automatizaciones con Google Apps Script y Python.</li></ul></li>
+        <li><button><span class="when">2015–2026</span><span><b>Servicios operativos y atención al cliente</b><small>Club Manquehue, Hotel Time, Hotel Manquehue</small></span></button>
+          <ul><li>Atención al público y resolución de consultas.</li><li>Chequeo de stock, control de inventario y apoyo en reposición.</li><li>Liderazgo ocasional de equipos pequeños en eventos.</li></ul></li>
+        <li><button><span class="when">2018</span><span><b>Ejecutiva online — ventas telecomunicaciones</b><small>Claro, Movistar, VTR, WOM, DirecTV</small></span></button>
+          <ul><li>Asesoría comercial y captura estructurada de datos de clientes.</li></ul></li>
+        <li><button><span class="when">2016</span><span><b>Secretaria recepcionista (reemplazo)</b><small>MB&amp;B Computación Ltda.</small></span></button>
+          <ul><li>Recepción, atención telefónica y apoyo administrativo.</li></ul></li>
+        <li><button><span class="when">2015</span><span><b>Cajera y operaria</b><small>Doggis</small></span></button>
+          <ul><li>Atención al cliente, manejo de caja y preparación de pedidos.</li></ul></li>
+        <li><button><span class="when">Anterior</span><span><b>Vendedora</b><small>Almacén “El Boliche”</small></span></button>
+          <ul><li>Venta y atención de clientes, reposición de productos.</li></ul></li>
+      </ol>
+      <p class="hint">Toca cada cargo para ver el detalle.</p>
+    </div>
+    <div id="formacion">
+      <h3 class="col-title">Formación</h3>
+      <div class="edu">
+        <div><b>Programa de Análisis de Datos</b><small>Fundación Soy Más · 2025–2026</small></div>
+        <div><b>Semana de Agentes de IA en la Práctica</b><small>Daxus LATAM · octubre 2026</small></div>
+        <div><b>Semana de Inteligencia Artificial en la Práctica</b><small>Daxus LATAM · octubre 2026</small></div>
+        <div><b>Semana de Python en la Práctica</b><small>Daxus LATAM · septiembre 2026</small></div>
+        <div><b>Técnico de Nivel Medio en Contabilidad</b><small>Colegio Técnico Profesional Aprender · 2014</small></div>
+      </div>
+      <h3 class="col-title" style="margin-top:32px">Habilidades</h3>
+      <div class="pills"><span>Pensamiento analítico</span><span>Orientación al cliente</span><span>Trabajo en equipo</span><span>Liderazgo de equipos</span><span>Organización</span><span>Adaptabilidad</span></div>
+    </div>
   </div>
 </div></section>
 
@@ -196,6 +237,7 @@ tools.forEach(t=>{const b=document.createElement('button');b.className='chip';b.
 const zoom=document.getElementById('zoom');
 document.querySelectorAll('.dash img').forEach(i=>i.onclick=()=>{zoom.querySelector('img').src=i.src;zoom.showModal()});
 zoom.onclick=()=>zoom.close();
+document.querySelectorAll('.xp button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
 const root=document.documentElement;
 try{const s=localStorage.getItem('theme');if(s)root.dataset.theme=s}catch(e){}
 document.getElementById('theme').onclick=()=>{
